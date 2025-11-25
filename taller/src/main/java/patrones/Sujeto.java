@@ -9,5 +9,7 @@ package patrones;
  * @author HUAWEI
  */
 public class Sujeto {
-    
+    void agregarObservador (Observador o);
+    void quitarObservador(Observador o);
+    void notificar (String mensaje);
 }
