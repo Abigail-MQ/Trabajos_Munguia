@@ -4,10 +4,23 @@
  */
 package patrones;
 
+import modelo.TipoServicio;
+
 /**
  *
  * @author HUAWEI
  */
 public class TipoServicioFactory {
-    
+    public static TipoServicio obtenerTipo(String nombre) {
+        switch (nombre.toLowerCase()) {
+            case "mantenimiento":
+                return TipoServicio.MANTENIMIENTO;
+            case "reparacion":
+                return TipoServicio.REPARACION;
+            case "diagnostico":
+                return TipoServicio.DIAGNOSTICO;
+            default: 
+                return TipoServicio.DIAGNOSTICO;
+        }
+    }
 }
