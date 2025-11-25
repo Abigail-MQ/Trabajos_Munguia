@@ -8,6 +8,6 @@ package patrones;
  *
  * @author HUAWEI
  */
-public class Observador {
-    
+public interface Observador {
+    void actualizar(String mensaje);
 }
