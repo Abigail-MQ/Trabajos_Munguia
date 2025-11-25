@@ -4,10 +4,18 @@
  */
 package patrones;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HUAWEI
  */
-public class AlertaAdministrador {
-    
+public class AlertaAdministrador implements Observador {
+    @Override
+    public void actualizar (String mensaje) {
+        JOptionPane.showMessageDialog(null,
+                                      "ALERTA DEL SISTEMA: \n" +message,
+                                      "Advertencia",
+                                      JOption.Pane.WARNING_MESSAGE);
+    }
 }
